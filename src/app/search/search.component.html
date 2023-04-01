@@ -1,0 +1,70 @@
+<h2>
+  <button mat-icon-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  Search: </h2>
+
+<form [formGroup]="searchForm">
+  <mat-form-field appearance="outline" class="full-width-input">
+    <mat-label>Search:</mat-label>
+    <input matInput formControlName="query">
+  </mat-form-field>
+
+  <mat-form-field class="full-width-input">
+    <mat-label>Search in:</mat-label>
+    <mat-select formControlName="searchOption">
+      <mat-option value="servers">Servers</mat-option>
+      <mat-option value="sites">Sites</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="full-width-input">
+    <mat-label>Filter by:</mat-label>
+    <mat-select formControlName="searchFilter">
+      <mat-option value="name">Name</mat-option>
+      <mat-option value="domainName">Domain Name</mat-option>
+      <mat-option value="ipAddress">IP Address</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
+<br><br>
+
+
+<div *ngIf="searchResults.length > 0">
+  <h3>Search Results</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th *ngIf="searchForm.value.searchOption === 'sites'">Domain Name</th>
+        <th>IP Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of searchResults">
+        <td>{{ result.name }}</td>
+        <td *ngIf="searchForm.value.searchOption === 'sites'">{{ result.domainName }}</td>
+        <td>{{ result.ipAddress }}</td>
+        <td>
+          <ng-container *ngIf="searchForm.value.searchOption === 'servers'; else elseTemplate">
+            <button mat-mini-fab color="primary" routerLink="/servers/{{result.id}}">
+              <mat-icon>open_in_new</mat-icon>
+            </button>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <button mat-mini-fab color="primary" routerLink="/servers/{{result.serverId}}/sites/{{result.id}}">
+              <mat-icon>open_in_new</mat-icon>
+            </button>
+          </ng-template>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="searchResults.length === 0 && searchForm.value.query !== ''">
+  <p>No results found.</p>
+</div>

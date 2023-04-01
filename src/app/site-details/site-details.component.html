@@ -1,0 +1,12 @@
+<h2>
+  <button mat-icon-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  Site: {{ site?.name }}</h2>
+
+<p>Domain Name: {{ site?.domainName }}</p>
+<p>IP Address: {{ site?.ipAddress }}</p>
+
+<div>Status:
+  <button mat-raised-button [ngClass]="[site.active ? 'success' : 'danger']" (click)="ToggleStatus(serverId,site)">{{ site.active ? 'Active' : 'Inactive' }}</button>
+</div>

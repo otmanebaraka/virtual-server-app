@@ -1,6 +1,7 @@
 export interface HostedSite {
+  id:number;
   name: string;
-  domaineName: string;
+  domainName: string;
   ipAddress:string;
-  isActive: boolean;
+  active: boolean;
 }

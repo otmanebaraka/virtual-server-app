@@ -1,0 +1,205 @@
+[
+  {
+     "id":1,
+     "name":"Serveur 1",
+     "ipAddress":"192.168.0.1",
+     "sites":[
+        {
+           "id":1,
+           "name":"Site 1",
+           "domainName":"www.site1.com",
+           "ipAddress":"192.168.0.1",
+           "active":true
+        },
+        {
+           "id":2,
+           "name":"Site 2",
+           "domainName":"www.site2.com",
+           "ipAddress":"192.168.0.1",
+           "active":false
+        },
+        {
+           "id":3,
+           "name":"Site 3",
+           "domainName":"www.site3.com",
+           "ipAddress":"192.168.0.1",
+           "active":true
+        },
+        {
+           "id":4,
+           "name":"Site 4",
+           "domainName":"www.site4.com",
+           "ipAddress":"192.168.0.1",
+           "active":true
+        },
+        {
+           "id":5,
+           "name":"Site 5",
+           "domainName":"www.site5.com",
+           "ipAddress":"192.168.0.1",
+           "active":false
+        },
+        {
+           "id":6,
+           "name":"Site 6",
+           "domainName":"www.site6.com",
+           "ipAddress":"192.168.0.1",
+           "active":true
+        },
+        {
+           "id":7,
+           "name":"Site 7",
+           "domainName":"www.site7.com",
+           "ipAddress":"192.168.0.1",
+           "active":true
+        },
+        {
+           "id":8,
+           "name":"Site 8",
+           "domainName":"www.site8.com",
+           "ipAddress":"192.168.0.1",
+           "active":false
+        },
+        {
+           "id":9,
+           "name":"Site 9",
+           "domainName":"www.site9.com",
+           "ipAddress":"192.168.0.1",
+           "active":true
+        },
+        {
+           "id":10,
+           "name":"Site 10",
+           "domainName":"www.site10.com",
+           "ipAddress":"192.168.0.1",
+           "active":true
+        }
+     ]
+  },
+  {
+     "id":2,
+     "name":"Serveur 2",
+     "ipAddress":"192.168.0.2",
+     "sites":[
+        {
+           "id":11,
+           "name":"Site 11",
+           "domainName":"www.site11.com",
+           "ipAddress":"192.168.0.2",
+           "active":true
+        },
+        {
+           "id":12,
+           "name":"Site 12",
+           "domainName":"www.site12.com",
+           "ipAddress":"192.168.0.2",
+           "active":false
+        },
+        {
+           "id":13,
+           "name":"Site 13",
+           "domainName":"www.site13.com",
+           "ipAddress":"192.168.0.2",
+           "active":true
+        },
+        {
+           "id":14,
+           "name":"Site 14",
+           "domainName":"www.site14.com",
+           "ipAddress":"192.168.0.2",
+           "active":true
+        },
+        {
+           "id":15,
+           "name":"Site 15",
+           "domainName":"www.site15.com",
+           "ipAddress":"192.168.0.2",
+           "active":false
+        },
+        {
+           "id":16,
+           "name":"Site 16",
+           "domainName":"www.site16.com",
+           "ipAddress":"192.168.0.2",
+           "active":true
+        },
+        {
+           "id":17,
+           "name":"Site 17",
+           "domainName":"www.site17.com",
+           "ipAddress":"192.168.0.2",
+           "active":true
+        },
+        {
+           "id":18,
+           "name":"Site 18",
+           "domainName":"www.site18.com",
+           "ipAddress":"192.168.0.2",
+           "active":false
+        },
+        {
+           "id":19,
+           "name":"Site 19",
+           "domainName":"www.site19.com",
+           "ipAddress":"192.168.0.2",
+           "active":true
+        },
+        {
+           "id":20,
+           "name":"Site 20",
+           "domainName":"www.site20.com",
+           "ipAddress":"192.168.0.2",
+           "active":true
+        }
+     ]
+  },
+  {
+     "id":3,
+     "name":"Serveur 3",
+     "ipAddress":"192.168.0.3",
+     "sites":[
+        {
+           "id":21,
+           "name":"Site 21",
+           "domainName":"www.site21.com",
+           "ipAddress":"192.168.0.3",
+           "active":true
+        },
+        {
+           "id":22,
+           "name":"Site 22",
+           "domainName":"www.site22.com",
+           "ipAddress":"192.168.0.3",
+           "active":false
+        },
+        {
+           "id":23,
+           "name":"Site 23",
+           "domainName":"www.site23.com",
+           "ipAddress":"192.168.0.3",
+           "active":true
+        },
+        {
+           "id":24,
+           "name":"Site 24",
+           "domainName":"www.site24.com",
+           "ipAddress":"192.168.0.3",
+           "active":true
+        },
+        {
+           "id":25,
+           "name":"Site 25",
+           "domainName":"www.site25.com",
+           "ipAddress":"192.168.0.3",
+           "active":false
+        },
+        {
+           "id":26,
+           "name":"Site 26",
+           "domainName":"www.site26.com",
+           "ipAddress":"192.168.0.3",
+           "active":true
+        }
+     ]
+  }
+]
