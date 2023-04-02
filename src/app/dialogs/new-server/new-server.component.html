@@ -1,31 +1,30 @@
-<h1 mat-dialog-title>Add new Server</h1>
+<h1 mat-dialog-title>Ajouter un nouveau serveur</h1>
 <div mat-dialog-content>
   <div *ngIf="ErrorMessage" class="error">
     {{ErrorMessage}}
   </div>
   <form [formGroup]="serverForm">
     <mat-form-field appearance="outline"class="full-width-input">
-      <mat-label>Server Name</mat-label>
-      <input matInput placeholder="Server Name" formControlName="name">
+      <mat-label>Nom du serveur</mat-label>
+      <input matInput placeholder="Nom du serveur" formControlName="name">
       <mat-error *ngIf="serverForm.controls['name'].invalid">
-        Server Name is Required
+        Le nom du serveur est obligatoire
       </mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline"class="full-width-input">
-      <mat-label>IP Address</mat-label>
+      <mat-label>Adresse IP</mat-label>
       <input matInput placeholder="Ex: 192.168.0.1" formControlName="ipAddress">
-      <mat-hint>IP Address Format must be like this: 192.168.0.1</mat-hint>
+      <mat-hint>Le format de l'adresse IP doit être comme ceci : 192.168.0.1</mat-hint>
       <mat-error *ngIf="serverForm.controls.ipAddress.hasError('required')">
-        ipAddress is Required
+        L'adresse IP est obligatoire
       </mat-error>
       <mat-error *ngIf="serverForm.controls.ipAddress.hasError('pattern')">
-        Please enter a valid IP address in the format like this: 192.168.0.1
+        Veuillez saisir une adresse IP valide dans le format suivant : 192.168.0.1
       </mat-error>
     </mat-form-field>
   </form>
 </div>
 <div mat-dialog-actions>
-  <button mat-button color="danger" mat-dialog-close>Cancel</button>
-  <button mat-button color="primary" (click)="addServer()" [disabled]="serverForm.invalid">Add Server</button>
+  <button mat-button color="danger" mat-dialog-close>Annuler</button>
+  <button mat-button color="primary" (click)="addServer()" [disabled]="serverForm.invalid">Ajouter le serveur</button>
 </div>
-

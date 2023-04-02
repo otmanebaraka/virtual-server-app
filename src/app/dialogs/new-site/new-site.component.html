@@ -1,39 +1,38 @@
-<h1 mat-dialog-title>Add Site</h1>
+<h1 mat-dialog-title>Ajouter un site</h1>
 <div mat-dialog-content>
   <div *ngIf="ErrorMessage" class="error">
     {{ErrorMessage}}
   </div>
   <form [formGroup]="siteForm">
     <mat-form-field appearance="outline" class="full-width-input">
-      <mat-label>Site Name</mat-label>
-      <input matInput placeholder="Site Name" formControlName="name">
+      <mat-label>Nom du site</mat-label>
+      <input matInput placeholder="Nom du site" formControlName="name">
       <mat-error *ngIf="siteForm.controls['name'].invalid">
-        Site Name is Required
+        Le nom du site est obligatoire
       </mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline" class="full-width-input">
-      <mat-label>Domain Name</mat-label>
-      <input matInput placeholder="www.domainname.com" formControlName="domainName">
+      <mat-label>Nom de domaine</mat-label>
+      <input matInput placeholder="www.nomdomaine.com" formControlName="domainName">
       <mat-error *ngIf="siteForm.controls['domainName'].invalid">
-        Domain Name is Required
+        Le nom de domaine est obligatoire
       </mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline" class="full-width-input">
-      <mat-label>IP Address</mat-label>
+      <mat-label>Adresse IP</mat-label>
       <input matInput placeholder="Ex: 192.168.0.1" formControlName="ipAddress">
-      <mat-hint>IP Address Format must be like this: 192.168.0.1</mat-hint>
+      <mat-hint>Le format de l'adresse IP doit être comme ceci: 192.168.0.1</mat-hint>
       <mat-error *ngIf="siteForm.controls.ipAddress.hasError('required')">
-        ipAddress is Required
+        L'adresse IP est obligatoire
       </mat-error>
       <mat-error *ngIf="siteForm.controls.ipAddress.hasError('pattern')">
-        Please enter a valid IP address in the format like this: 192.168.0.1
+        Veuillez entrer une adresse IP valide au format comme ceci: 192.168.0.1
       </mat-error>
     </mat-form-field>
-    <mat-checkbox formControlName="active">Site Status</mat-checkbox>
+    <mat-checkbox formControlName="active">Statut du site</mat-checkbox>
   </form>
 </div>
 <div mat-dialog-actions>
-  <button mat-button color="danger" mat-dialog-close>Cancel</button>
-  <button mat-button color="primary" (click)="addSite()" [disabled]="siteForm.invalid">Add Site</button>
+  <button mat-button color="danger" mat-dialog-close>Annuler</button>
+  <button mat-button color="primary" (click)="addSite()" [disabled]="siteForm.invalid">Ajouter un site</button>
 </div>
-

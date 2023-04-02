@@ -25,11 +25,13 @@ export class SiteDetailsComponent implements OnInit {
     // console.log(this.route.snapshot.paramMap);
     this.getSite();
   }
-  getSite():void{
+  async getSite():Promise<void>{
     if(this.siteId){
-      this.backendService.getSiteById(+this.serverId,+this.siteId).subscribe((site:HostedSite) => {
-        this.site = site;
-      });
+      try{
+        this.site = await this.backendService.getSiteById(+this.serverId,+this.siteId);
+      }catch(err){
+        console.error(err)
+      }
     }
   }
   ToggleStatus(serverID:number,site:HostedSite):void{

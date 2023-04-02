@@ -2,22 +2,19 @@
   <button mat-icon-button routerLink="/">
     <mat-icon>arrow_back</mat-icon>
   </button>
-  Server: {{ server?.name }}</h2>
-
-<p>IP Address: {{ server?.ipAddress }}</p>
-
+  Serveur: {{ server?.name }}</h2>
+<p>Adresse IP: {{ server?.ipAddress }}</p>
 <h3>Sites</h3>
 <mat-accordion>
   <mat-expansion-panel *ngFor="let site of server?.sites">
     <mat-expansion-panel-header>
       <mat-panel-title>{{ site.name }}</mat-panel-title>
     </mat-expansion-panel-header>
-    <p>Domain Name: {{ site.domainName }}</p>
-    <p>IP Address: {{ site.ipAddress }}</p>
-    <div>Status:
-      <button mat-raised-button [ngClass]="[site.active ? 'success' : 'danger']" (click)="ToggleStatus(server.id,site)">{{ site.active ? 'Active' : 'Inactive' }}</button>
+    <p>Nom de domaine: {{ site.domainName }}</p>
+    <p>Adresse IP: {{ site.ipAddress }}</p>
+    <div>Statut:
+      <button mat-raised-button [ngClass]="[site.active ? 'success' : 'danger']" (click)="ToggleStatus(server.id,site)">{{ site.active ? 'Actif' : 'Inactif' }}</button>
     </div>
-    <button mat-raised-button color="warn" (click)="deleteSite(server.id,site.id)">Delete</button>
+    <button mat-raised-button color="warn" (click)="deleteSite(server.id,site.id)">Supprimer</button>
   </mat-expansion-panel>
 </mat-accordion>
-

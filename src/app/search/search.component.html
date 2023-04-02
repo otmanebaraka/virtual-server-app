@@ -2,43 +2,38 @@
   <button mat-icon-button routerLink="/">
     <mat-icon>arrow_back</mat-icon>
   </button>
-  Search: </h2>
-
+  Recherche: </h2>
 <form [formGroup]="searchForm">
   <mat-form-field appearance="outline" class="full-width-input">
-    <mat-label>Search:</mat-label>
+    <mat-label>Rechercher:</mat-label>
     <input matInput formControlName="query">
   </mat-form-field>
-
   <mat-form-field class="full-width-input">
-    <mat-label>Search in:</mat-label>
+    <mat-label>Rechercher dans:</mat-label>
     <mat-select formControlName="searchOption">
-      <mat-option value="servers">Servers</mat-option>
+      <mat-option value="servers">Serveurs</mat-option>
       <mat-option value="sites">Sites</mat-option>
     </mat-select>
   </mat-form-field>
-
   <mat-form-field class="full-width-input">
-    <mat-label>Filter by:</mat-label>
+    <mat-label>Filtrer par:</mat-label>
     <mat-select formControlName="searchFilter">
-      <mat-option value="name">Name</mat-option>
-      <mat-option value="domainName">Domain Name</mat-option>
-      <mat-option value="ipAddress">IP Address</mat-option>
+      <mat-option value="name">Nom</mat-option>
+      <mat-option value="domainName">Nom de domaine</mat-option>
+      <mat-option value="ipAddress">Adresse IP</mat-option>
     </mat-select>
   </mat-form-field>
 </form>
-
 <br><br>
 
-
 <div *ngIf="searchResults.length > 0">
-  <h3>Search Results</h3>
+  <h3>Résultats de la recherche</h3>
   <table class="table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th *ngIf="searchForm.value.searchOption === 'sites'">Domain Name</th>
-        <th>IP Address</th>
+        <th>Nom</th>
+        <th *ngIf="searchForm.value.searchOption === 'sites'">Nom de domaine</th>
+        <th>Adresse IP</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -58,13 +53,11 @@
               <mat-icon>open_in_new</mat-icon>
             </button>
           </ng-template>
-
         </td>
       </tr>
     </tbody>
   </table>
 </div>
-
 <div *ngIf="searchResults.length === 0 && searchForm.value.query !== ''">
-  <p>No results found.</p>
+  <p>Aucun résultat trouvé.</p>
 </div>

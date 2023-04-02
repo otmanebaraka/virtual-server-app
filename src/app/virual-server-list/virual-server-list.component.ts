@@ -24,9 +24,14 @@ export class VirualServerListComponent implements OnInit {
     this.getServers();
   }
   getServers(): void {
-    this.backendService.getServers().subscribe(res =>{
-      if(res){
-        this.Servers = res;
+    this.backendService.getServers().subscribe({
+      next:(res:VirtualServer[]) =>{
+        if(res){
+          this.Servers = res;
+        }
+      },
+      error:err=>{
+        console.error(err);
       }
     });
   }

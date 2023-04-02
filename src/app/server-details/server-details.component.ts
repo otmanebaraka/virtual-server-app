@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import { lastValueFrom } from 'rxjs';
 import { DeleteDialogComponent } from '../dialogs/delete-dialog/delete-dialog.component';
 import { HostedSite } from '../interfaces/hosted-site';
 import { VirtualServer } from '../interfaces/virtual-server';
@@ -25,11 +26,13 @@ export class ServerDetailsComponent implements OnInit {
     this.Id = this.route.snapshot.paramMap.get('id');
     this.getServer();
   }
-  getServer():void{
+  async getServer():Promise<void>{
     if(this.Id){
-      this.backendService.getServerById(+this.Id).subscribe((server:VirtualServer) => {
-        this.server = server;
-      });
+      try{
+        this.server = await this.backendService.getServerById(+this.Id);
+      }catch(err){
+        console.error(err)
+      }
     }
   }
   ToggleStatus(serverID:number,site:HostedSite){
