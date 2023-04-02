@@ -28,7 +28,10 @@ export class BackendService {
     } else {
       return this.http.get<any[]>('assets/data-servers.json')
         .pipe(
-          tap((servers: any[]) => localStorage.setItem('servers', JSON.stringify(servers))),
+          tap((servers: any[]) => {
+            this.servers = servers;
+            localStorage.setItem('servers', JSON.stringify(servers));
+          }),
           catchError(this.handleError<any[]>('getServers', []))
         );
     }
