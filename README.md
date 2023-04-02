@@ -1,27 +1,32 @@
 # VirtualServerApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+Assurez-vous d'avoir installé node v18.13.0 et npm -v9.3.1 avant de continuer. Ensuite, suivez les étapes ci-dessous:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clonez le dépôt sur votre machine locale.
+2. Ouvrez un terminal et naviguez jusqu'au dossier racine du projet.
+3. Exécutez la commande `npm install` pour installer les dépendances.
+4. Exécutez la commande `ng serve` pour lancer l'application en mode développement.
 
-## Build
+## Utilisation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Une fois l'application lancée, vous pouvez accéder à l'interface en ouvrant votre navigateur et en accédant à l'URL suivante: https://localhost:4200/
 
-## Running unit tests
+À partir de l'interface, vous pouvez ajouter des serveurs et des sites, modifier des informations existantes, et supprimer des éléments. L'interface est conçue pour être facile à utiliser et intuitive, avec des fonctionnalités telles que la recherche pour vous aider à trouver ce dont vous avez besoin.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Démo
 
-## Running end-to-end tests
+Une démo en ligne de ce projet est disponible à l'adresse suivante : http://server-manager.barakaotmane.com/
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Technologies utilisées
 
-## Further help
+- Angular
+- Angular Material
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Auteur
+
+Ce projet a été créé par Baraka Otmane. mon site web personnel: https://www.barakaotmane.com/.
